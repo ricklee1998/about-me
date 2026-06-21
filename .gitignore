@@ -1,0 +1,27 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env*
+.vscode
+.idea
+
+# 민감 자료 패턴 — 실수로 staging되지 않게 모두 차단
+*.pem
+*.key
+*.crt
+*.csv
+*.xlsx
+*.xls
+*.hwp
+*.docx
+*.pptx
+*.mov
+*.mp4
+
+# deck 빌드 결과는 첨부할 수 있도록 커밋
+!deck/portfolio.pdf
+!deck/portfolio.pptx
+
+# CoCoMeet 시연 영상만 명시적 허용 (그 외 mp4/mov는 위에서 차단됨)
+!public/assets/univ/cocomeet-demo.mp4

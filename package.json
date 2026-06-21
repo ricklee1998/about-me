@@ -1,0 +1,32 @@
+{
+  "name": "ricklee1998-introduce",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "copy-assets": "node scripts/copy-assets.mjs",
+    "predev": "node scripts/copy-assets.mjs",
+    "prebuild": "node scripts/copy-assets.mjs",
+    "deck:pdf": "marp deck/portfolio.md --pdf --allow-local-files --theme deck/theme.css -o deck/portfolio.pdf",
+    "deck:pptx": "marp deck/portfolio.md --pptx --allow-local-files --theme deck/theme.css -o deck/portfolio.pptx",
+    "deck": "npm run deck:pdf && npm run deck:pptx"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.18.0"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.1.2",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}

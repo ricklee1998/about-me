@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light dark;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: keep-all;
+  text-wrap: pretty;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.dark body {
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+::selection {
+  background: var(--color-brand-300);
+  color: #0f172a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 부드러운 스크롤 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 카드 hover 트랜지션 */
+.card-hover {
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+}
