@@ -23,5 +23,4 @@ dist
 !deck/portfolio.pdf
 !deck/portfolio.pptx
 
-# CoCoMeet 시연 영상만 명시적 허용 (그 외 mp4/mov는 위에서 차단됨)
-!public/assets/univ/cocomeet-demo.mp4
+.vercel

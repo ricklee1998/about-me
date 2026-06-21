@@ -110,9 +110,8 @@ const COPY_MAP = [
   ['페어리테일-teapot-after', '추가자료/2026/Teapotchat/26_캐릭터제작_저장목록.png', 'teapot/after/18.png'],
   ['페어리테일-teapot-after', '추가자료/2026/Teapotchat/26_캐릭터제작_등록.png', 'teapot/after/19.png'],
 
-  // 대학 - CoCoMeet 시연 영상 + 로고 (영상 화이트리스트 통과)
+  // 대학 - CoCoMeet 로고만 (시연 영상 mp4는 100MB 초과로 repo에 포함 X — 별도 호스팅 필요)
   ['대학-cocomeet', 'CoCoMeet/public/logo512.png', 'univ/cocomeet-logo.png'],
-  ['대학-cocomeet', '추가자료/2026/CoCoMeet/cocomeet시연영상.mp4', 'univ/cocomeet-demo.mp4'],
 
   // 대학 - 스마투표 2026 캡처 (이름 익명화)
   ['대학-smartoopyo', 'smartoopyo/public_html/image/blacklogo.png', 'univ/smartoopyo-logo.png'],

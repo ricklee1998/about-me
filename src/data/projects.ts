@@ -196,7 +196,7 @@ export const projects: Project[] = [
     oneLine: 'LMS를 한 단계 끌어올린 LXP — 러닝 저널·퍼스널 그룹·미팅 허브로 학습 경험을 재설계',
     role: 'Frontend Lead (Next.js · TypeScript · Spring Boot · AI Chatbot)',
     context:
-      '발주처는 한양YK인터칼리지. 기존 LMS의 강의·과제 흐름을 넘어 학습 경험 자체를 지원하는 차세대 플랫폼을 새로 설계했습니다.',
+      '첫 LXP 발주처(국내 한 종합대학)로 시작한 프로젝트입니다. 기존 LMS의 강의·과제 흐름을 넘어 학습 경험 자체를 지원하는 차세대 플랫폼을 새로 설계했습니다.',
     overview:
       '기존 LMS가 강의·과제 관리에 머무른다면, LXP는 학생의 학습 경험과 성장 그 자체를 다룹니다. Zoom·Panopto·Slack 등 외부 CMS와의 연동, 학기 흐름을 단계별로 끌어가는 러닝 저널, 학생 커뮤니티를 위한 퍼스널 그룹, 온·오프라인 수업을 한 곳에서 다루는 미팅 허브까지 — 네 가지 축을 중심으로 프론트엔드를 설계했습니다.',
     features: [
@@ -386,7 +386,7 @@ export const projects: Project[] = [
       { src: '/assets/linus/kiwi-lms/13.png', caption: '관리자 — 유저 관리' },
       { src: '/assets/linus/kiwi-lms/14.png', caption: 'FAQ 페이지' },
     ],
-    note: '학생 정보가 포함된 화면은 마스킹 처리 후 게재했습니다.',
+    note: '일부 정보는 마스킹 처리 후 게재했습니다.',
   },
 
   // ────────────────── 에피소든 ──────────────────
@@ -606,11 +606,7 @@ export const projects: Project[] = [
     images: [
       { src: '/assets/univ/cocomeet-logo.svg', caption: 'CoCoMeet — Team #7' },
     ],
-    video: {
-      src: '/assets/univ/cocomeet-demo.mp4',
-      caption:
-        '실시간 협업 시연 — 채팅 말풍선이 트리 블록으로 변환되고, 여러 사용자가 동시에 보드를 편집합니다.',
-    },
+    note: '실시간 협업 시연 영상은 파일 크기가 커 리포지토리에 포함되지 않습니다. 필요 시 별도 공유 가능합니다.',
   },
   {
     id: 'smartoopyo',

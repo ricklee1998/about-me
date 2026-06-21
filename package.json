@@ -12,12 +12,18 @@
     "prebuild": "node scripts/copy-assets.mjs",
     "deck:pdf": "marp deck/portfolio.md --pdf --allow-local-files --theme deck/theme.css -o deck/portfolio.pdf",
     "deck:pptx": "marp deck/portfolio.md --pptx --allow-local-files --theme deck/theme.css -o deck/portfolio.pptx",
-    "deck": "npm run deck:pdf && npm run deck:pptx"
+    "deck": "npm run deck:pdf && npm run deck:pptx",
+    "onepager:pdf": "marp deck/onepager.md --pdf --allow-local-files --theme deck/theme.css -o deck/onepager.pdf",
+    "onepager:pptx": "marp deck/onepager.md --pptx --allow-local-files --theme deck/theme.css -o deck/onepager.pptx",
+    "onepager": "npm run onepager:pdf && npm run onepager:pptx",
+    "vercel:login": "vercel login",
+    "vercel:deploy": "vercel --prod"
   },
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.18.0"
+    "react-router-dom": "^7.18.0",
+    "vercel": "^54.14.5"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^4.1.2",
