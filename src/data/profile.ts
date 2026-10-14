@@ -51,7 +51,7 @@ export const profile: Profile = {
     {
       title: '페어리테일 — AI 캐릭터 채팅',
       body:
-        '티팟에서는 채팅 화면, 캐릭터 제작, 검색과 보관함을 개발했습니다. 2026년 8월부터는 React Native·Expo 앱을 새로 만들었습니다. 출시 준비 중 안드로이드 발열 제보를 받고 실기기로 원인을 측정해 고쳤고, 채팅 중 앱을 내려도 답변을 이어 볼 수 있도록 백엔드와 함께 연결 흐름을 손봤습니다.',
+        '티팟에서는 채팅 화면, 캐릭터 제작, 검색과 보관함을 개발했습니다. 2026년 8월부터는 React Native·Expo 앱을 새로 만들었습니다. 출시 준비 중에는 기기별 사용성을 점검했고, 채팅 중 앱을 내려도 답변을 이어 볼 수 있도록 백엔드와 함께 연결 흐름을 손봤습니다.',
     },
     {
       title: '서비스는 자식, 회사는 가족',
@@ -70,7 +70,7 @@ export const profile: Profile = {
     {
       title: '티팟 웹과 앱',
       body:
-        '웹 채팅과 제작 기능을 맡고, React Native 앱을 처음부터 구축해 내부 테스트에 배포했습니다. 안드로이드 발열은 실기기에서 원인을 찾아 대기 CPU를 약 230%에서 15%로 낮췄습니다.',
+        '웹 채팅과 제작 기능을 맡고, React Native 앱을 처음부터 구축해 내부 테스트에 배포했습니다. 출시 뒤에는 채팅 재진입과 기기별 사용성 문제를 고쳤습니다.',
     },
     {
       title: '대학 LMS — 고객과의 소통',
@@ -83,7 +83,7 @@ export const profile: Profile = {
     phone: '010-6289-2548',
     github: 'https://github.com/ricklee1998',
   },
-  keywords: ['Next.js', 'TypeScript', 'React Native', '채팅 UX', '성능 분석'],
+  keywords: ['Next.js', 'TypeScript', 'React Native', '채팅 UX', '앱 QA'],
   skills: [
     {
       label: 'Frontend',
