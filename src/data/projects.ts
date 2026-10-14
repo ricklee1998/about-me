@@ -16,6 +16,11 @@ export type ProjectFeature = {
   body: string;
 };
 
+export type RecentWork = ProjectFeature & {
+  period: string;
+  featured?: boolean;
+};
+
 export type ProjectComparison = {
   topic: string;
   description?: string;
@@ -38,6 +43,8 @@ export type Project = {
   images: ProjectImage[];
   video?: ProjectVideo;
   features?: ProjectFeature[];
+  recentRange?: string;
+  recentWork?: RecentWork[];
   comparisons?: ProjectComparison[];
   context?: string;
   note?: string;
@@ -48,7 +55,7 @@ export const companyOrder: Company[] = ['페어리테일', '라이너스', '에�
 export const companyMeta: Record<Company, { period: string; oneLine: string }> = {
   페어리테일: {
     period: '2025.12 ~ 재직 중',
-    oneLine: 'AI 캐릭터 채팅 플랫폼 티팟의 프론트엔드 고도화',
+    oneLine: '티팟 웹의 채팅·제작 기능 개발, React Native 앱 신규 구축·운영',
   },
   라이너스: {
     period: '2025.03 ~ 2025.12',
@@ -67,17 +74,100 @@ export const companyMeta: Record<Company, { period: string; oneLine: string }> =
 export const projects: Project[] = [
   // ────────────────── 페어리테일 ──────────────────
   {
+    id: 'teapot-mobile',
+    company: '페어리테일',
+    title: '티팟 모바일 앱 — React Native·Expo',
+    period: '2026.08 ~ 진행 중',
+    oneLine: '웹의 주요 화면을 앱으로 옮기고, 테스트 배포 뒤 발견한 문제까지 고쳤습니다.',
+    role: 'Mobile Frontend (React Native · Expo · TypeScript)',
+    context:
+      '2026년 8월 26일 앱 저장소를 처음 만들었습니다. 이미 운영 중인 티팟 웹을 바탕으로 로그인, 탐색, 캐릭터 상세, 채팅, 캐릭터 제작을 앱에서도 쓸 수 있게 하는 일이었습니다.',
+    overview:
+      '공통 컴포넌트부터 화면과 내비게이션을 만들고 태블릿·폴더블 레이아웃을 맞췄습니다. 약 3주 만에 TestFlight와 Google Play 내부 테스트에 첫 빌드를 배포했습니다. 이후 실사용자 QA에서 발견한 채팅, 스크롤, 발열 문제를 계속 고쳤습니다.',
+    recentRange: '2026.08–10',
+    recentWork: [
+      {
+        period: '2026.08–09',
+        title: '앱 신규 구축과 첫 테스트 배포',
+        featured: true,
+        body: '8월 26일 저장소를 만들고 로그인, 홈, 검색, 캐릭터 상세, 채팅, 제작 화면을 구현했습니다. 약 3주 뒤 iOS TestFlight와 Google Play 내부 테스트에 첫 빌드를 올렸습니다.',
+      },
+      {
+        period: '2026.09',
+        title: '웹과 앱의 채팅 흐름 맞추기',
+        body: '채팅 v2와 캐릭터 제작을 앱에 옮기고, 입력창·스크롤·상태창을 기기별로 확인했습니다. 앱을 내린 사이 연결이 끊겨도 다시 들어와 답변을 볼 수 있도록 백엔드와 함께 처리했습니다.',
+      },
+      {
+        period: '2026.09–10',
+        title: '실기기 QA와 성능 개선',
+        featured: true,
+        body: '실사용자 QA를 여러 차례 돌렸습니다. 갤럭시 노트20에서 홈 화면 대기 CPU가 약 230%인 원인을 이미지 디코딩으로 좁혀 재생 정책을 바꿨고, 같은 조건에서 약 15%로 내려간 것을 확인했습니다.',
+      },
+    ],
+    features: [
+      {
+        title: '웹 기능을 앱에 맞게 옮기기',
+        body: '로그인, 홈, 검색, 캐릭터 상세, 채팅, 제작 흐름을 앱의 화면 크기와 이동 방식에 맞춰 구현했습니다.',
+      },
+      {
+        title: '태블릿·폴더블 대응',
+        body: '아이패드와 갤럭시 Z 폴드에서 목록, 채팅, 제작 화면이 자연스럽게 보이도록 레이아웃을 조정했습니다.',
+      },
+      {
+        title: '채팅 재진입',
+        body: '백그라운드로 이동하면서 연결이 끊기는 상황을 다뤘습니다. 서버에 남은 답변을 다시 읽어 채팅이 이어지도록 웹·앱·백엔드 흐름을 맞췄습니다.',
+      },
+      {
+        title: '움직이는 이미지 재생 정책',
+        body: '화면에 보이지 않는 이미지가 계속 디코딩되지 않도록 재생 정책을 적용했습니다. 수정 전후를 같은 안드로이드 기기에서 다시 측정했습니다.',
+      },
+    ],
+    responsibilities: [
+      'React Native·Expo 앱 저장소 생성, 공통 컴포넌트·화면·내비게이션 구축',
+      '웹의 채팅 v2와 6단계 캐릭터 제작 흐름을 앱에 맞게 구현',
+      '아이패드·폴더블 레이아웃, 다크모드, 스크롤·입력창 등 기기별 사용성 개선',
+      'TestFlight·Google Play 내부 테스트 빌드와 배포 자동화, 실사용자 QA 대응',
+      '안드로이드 발열 원인 측정 및 이미지 재생 정책 적용',
+    ],
+    achievements: [
+      '2026.08.26 저장소 생성 후 약 3주 만에 iOS·Android 내부 테스트에 첫 빌드 배포',
+      '갤럭시 노트20(Android 13, 2026.09) 홈 화면 대기 CPU 약 230% → 15%로 감소',
+      '채팅 중 앱을 내려도 재진입 후 답변을 이어 볼 수 있도록 백엔드와 함께 연결 흐름 개선',
+    ],
+    stack: ['React Native', 'Expo', 'TypeScript', 'Reanimated', 'Zustand', 'Firebase', 'Crashlytics'],
+    images: [{ src: '/assets/teapot/mobile-cover.svg', caption: '티팟 모바일 앱 프로젝트 표지' }],
+  },
+  {
     id: 'teapot',
     company: '페어리테일',
-    title: '티팟(Teapot) — AI 캐릭터 채팅 플랫폼',
+    title: '티팟 웹 — AI 캐릭터 채팅 플랫폼',
     period: '2025.12 ~ 재직 중',
     site: 'https://teapotchat.com',
     oneLine: '제작자가 만드는 캐릭터, 사용자가 즐기는 대화 — LLM 기반 AI 캐릭터 채팅 플랫폼',
-    role: 'Frontend (Next.js · TypeScript · GCP)',
+    role: 'Web Frontend (Next.js 15 · React 19 · TypeScript)',
     context:
       '티팟은 LLM 기반의 AI 캐릭터 채팅 플랫폼입니다. 타겟은 크게 두 축 — 제작자는 자신만의 캐릭터를 창조하고, 사용자는 그 캐릭터와의 대화에서 재미와 즐거움을 얻습니다. 성별·연령에 관계없이 다양한 결의 캐릭터가 공존하는 공간입니다. 저는 2025년 12월말부터 합류해 프론트엔드 전반의 리뉴얼 작업을 맡고 있습니다.',
     overview:
-      '주로 다룬 영역은 검색·메인·제작자·채팅 내부 네 페이지입니다. 입사 직전 버전(25_)의 화면들은 정보가 빽빽하고 제작자가 거쳐야 할 단계가 많았는데, 저는 같은 기능을 유지하면서 사용자가 처음 만나도 막히지 않는 흐름으로 재설계하는 데 집중했습니다. 특히 제작자 페이지는 일반 모드와 전문가 모드로 분리해, 처음 만드는 사람과 능숙한 사람이 각자의 속도로 캐릭터를 만들 수 있게 했습니다 — 실제 제작자분들의 피드백도 매우 긍정적이었습니다.',
+      '처음에는 검색·메인·제작자·채팅 화면을 리뉴얼했습니다. 제작 화면은 일반/전문가 모드로 나눠 처음 만드는 사람의 진입 부담을 줄였습니다. 2026년 7월부터는 채팅 v2, 채팅 안에서 실행되는 JSX 컴포넌트, 검색·북마크·보관함을 다뤘습니다. 웹과 새 모바일 앱의 동작을 맞추는 일도 함께했습니다.',
+    recentRange: '2026.07–10',
+    recentWork: [
+      {
+        period: '2026.07–08',
+        title: '채팅 v2와 JSX 연동',
+        featured: true,
+        body: '채팅 화면의 입력·스크롤·답변 표시를 다시 정리했습니다. 채팅 안에서 실행되는 JSX 컴포넌트에는 샌드박스와 채팅 브리지 통신 규약을 연결하고, 화면 크기가 바뀔 때의 동작을 고쳤습니다.',
+      },
+      {
+        period: '2026.09',
+        title: '끊긴 채팅 이어 보기',
+        body: '답변 생성 중 연결이 끊기면 바로 오류로 표시하던 흐름을 고쳤습니다. 서버에 저장된 답변을 기다려 재진입 시 이어 볼 수 있게 백엔드·앱 개발과 함께 맞췄습니다.',
+      },
+      {
+        period: '2026.09–10',
+        title: '검색·북마크·보관함',
+        body: '해시태그에서 탐색 검색으로 넘어가는 동선, 알골리아 검색, 북마크 이동과 채팅 보관함의 폴더별 사용 흐름을 개선했습니다.',
+      },
+    ],
     features: [
       {
         title: '검색 · 메인 — 탐색 흐름 재설계',
@@ -112,6 +202,8 @@ export const projects: Project[] = [
     ],
     responsibilities: [
       'Next.js·TypeScript 기반 검색·메인·제작자·채팅 등 주요 페이지 전면 리뉴얼',
+      '2026년 7–10월 채팅 v2 화면·입력·스크롤 정책 개선, JSX 샌드박스와 채팅 브리지 연동',
+      '검색·북마크·보관함 개선과 웹·앱 채팅 재진입 흐름 조율',
       '제작자 페이지 — 일반(simple) / 전문가(detail) 모드 분리, 단계 축소, 진입 장벽 완화',
       '캐릭터 제작 — 이미지 관리(폴더/일반 타입 · List·Grid·Split 뷰 · Drag&Drop 폴더 합치기·이미지 합치기·폴더 해제) 설계·구현',
       '캐릭터 제작 — 드래프트·체크포인트 기반 버전 관리(최대 50개), 10분 주기 자동저장, 작성 중 이탈 가드, 30,000자 진행률 측정',

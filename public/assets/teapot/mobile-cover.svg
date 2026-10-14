@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">티팟 모바일 앱 프로젝트</title>
+  <desc id="desc">React Native와 Expo로 만든 티팟 모바일 앱의 간결한 프로젝트 표지</desc>
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <path d="M70 86h1060M70 585h1060" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="72" y="70" fill="#0f766e" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">FAIRYTALE / TEAPOT</text>
+  <text x="75" y="232" fill="#0f172a" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="64" font-weight="700">티팟 모바일 앱</text>
+  <text x="77" y="295" fill="#475569" font-family="Arial, sans-serif" font-size="30">React Native · Expo · TypeScript</text>
+  <path d="M77 336h410" stroke="#0f766e" stroke-width="5"/>
+  <text x="77" y="412" fill="#334155" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="26">웹의 핵심 흐름을 앱으로 옮기고</text>
+  <text x="77" y="452" fill="#334155" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="26">기기에서 직접 확인하며 고쳤습니다.</text>
+  <text x="77" y="553" fill="#64748b" font-family="Arial, sans-serif" font-size="20">2026.08 —</text>
+  <rect x="765" y="58" width="314" height="557" rx="48" fill="#f8fafc" stroke="#0f172a" stroke-width="8"/>
+  <rect x="876" y="74" width="92" height="15" rx="7" fill="#0f172a"/>
+  <rect x="787" y="111" width="270" height="479" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="811" y="159" fill="#0f766e" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" font-size="27" font-weight="700">티팟</text>
+  <path d="M811 180h221" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="811" y="205" width="221" height="103" rx="13" fill="#ecfdf5"/>
+  <rect x="811" y="329" width="105" height="93" rx="12" fill="#f1f5f9"/>
+  <rect x="927" y="329" width="105" height="93" rx="12" fill="#f1f5f9"/>
+  <rect x="811" y="444" width="221" height="22" rx="10" fill="#e2e8f0"/>
+  <rect x="811" y="479" width="164" height="18" rx="9" fill="#e2e8f0"/>
+  <path d="M811 549h221" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="854" cy="568" r="7" fill="#0f766e"/>
+  <circle cx="921" cy="568" r="7" fill="#cbd5e1"/>
+  <circle cx="988" cy="568" r="7" fill="#cbd5e1"/>
+</svg>
