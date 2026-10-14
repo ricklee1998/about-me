@@ -34,6 +34,7 @@ export type Project = {
   title: string;
   period: string;
   site?: string;
+  storeLinks?: { label: string; href?: string; status?: string }[];
   oneLine: string;
   role: string;
   overview: string;
@@ -78,7 +79,11 @@ export const projects: Project[] = [
     company: '페어리테일',
     title: '티팟 모바일 앱 — React Native·Expo',
     period: '2026.08 ~ 진행 중',
-    oneLine: '웹의 주요 화면을 앱으로 옮기고, 테스트 배포 뒤 발견한 문제까지 고쳤습니다.',
+    oneLine: '웹의 주요 화면을 앱으로 옮기고, Android 앱을 Google Play에 공개했습니다.',
+    storeLinks: [
+      { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=kr.ai.fairytale.teapot' },
+      { label: 'App Store', status: '심사 중 · 링크 준비 중' },
+    ],
     role: 'Mobile Frontend (React Native · Expo · TypeScript)',
     context:
       '2026년 8월 26일 앱 저장소를 처음 만들었습니다. 이미 운영 중인 티팟 웹을 바탕으로 로그인, 탐색, 캐릭터 상세, 채팅, 캐릭터 제작을 앱에서도 쓸 수 있게 하는 일이었습니다.',
@@ -129,7 +134,17 @@ export const projects: Project[] = [
       '채팅 중 앱을 내려도 재진입 후 답변을 이어 볼 수 있도록 백엔드와 함께 연결 흐름 개선',
     ],
     stack: ['React Native', 'Expo', 'TypeScript', 'Reanimated', 'Zustand', 'Firebase', 'Crashlytics'],
-    images: [{ src: '/assets/teapot/mobile-cover.svg', caption: '티팟 모바일 앱 프로젝트 표지' }],
+    images: [
+      { src: '/assets/teapot/mobile-cover.svg', caption: '티팟 모바일 앱 프로젝트 표지' },
+      { src: '/assets/teapot/mobile/ios/01-4.png', caption: 'iOS · 캐릭터 상세' },
+      { src: '/assets/teapot/mobile/ios/02-5.png', caption: 'iOS · 채팅' },
+      { src: '/assets/teapot/mobile/ios/03-6.png', caption: 'iOS · 홈과 실시간 랭킹' },
+      { src: '/assets/teapot/mobile/ios/04-7.png', caption: 'iOS · 제작자 컬렉션' },
+      { src: '/assets/teapot/mobile/android/screenshot-1.png', caption: 'Android · 캐릭터 상세' },
+      { src: '/assets/teapot/mobile/android/screenshot-2.png', caption: 'Android · 채팅' },
+      { src: '/assets/teapot/mobile/android/screenshot-6.png', caption: 'Android · 홈과 실시간 랭킹' },
+      { src: '/assets/teapot/mobile/android/screenshot-7.png', caption: 'Android · 제작자 컬렉션' },
+    ],
   },
   {
     id: 'teapot',
@@ -349,7 +364,7 @@ export const projects: Project[] = [
     period: '2025.08 ~ 2025.11',
     site: 'https://skttlink.com',
     oneLine: '*(별) + 단축번호 발신만으로 기업·이벤트 페이지에 바로 진입하는 SKT 전용 채널',
-    role: 'Full-stack (Next.js · Nest.js · React + Vite · MySQL)',
+    role: 'Full-stack (Next.js · Nest.js · React · MySQL)',
     context:
       '다이얼 링크(Dial Link) — 번호와 *(별)을 함께 발신하면 SKT 무선망에서 모바일 웹으로 연결되는 SKT 고유 기능. T-Link는 이 다이얼 링크 위에서 동작하는 단축 진입 채널로, 기업·이벤트 주최자가 자기 전용 단축번호를 구매하면 사용자가 *(별) + 단축번호만 누르고 발신해서 곧바로 해당 페이지에 진입할 수 있습니다. (SKT 가입자 전용. iPhone은 다이얼 링크에서 보낸 문자를 클릭해 접속, 최초 1회 이용 동의 필요)',
     overview:
@@ -372,7 +387,7 @@ export const projects: Project[] = [
       },
     ],
     responsibilities: [
-      'Next.js 기반 사용자용 프론트엔드, Nest.js 기반 백엔드, React+Vite 기반 어드민까지 풀스택 개발',
+      'Next.js 기반 사용자용 프론트엔드, Nest.js 기반 백엔드, React 기반 어드민까지 풀스택 개발',
       'SK텔레콤 담당자와 직접 소통하며 다이얼 링크 동작 명세·라우팅 정책을 기능으로 구체화',
       '단축번호와 기업·이벤트 페이지를 연결하는 라우팅 구조 설계',
       '기업 페이지·콘텐츠·회원 전용 페이지 운영 구조 개발',
@@ -385,7 +400,7 @@ export const projects: Project[] = [
       '회원 전용 혜택을 단축번호 단위로 노출할 수 있는 운영 기반 마련',
       'SKT 직원과의 지속적 협업으로 통신사 요건을 빠르게 반영',
     ],
-    stack: ['Next.js', 'TypeScript', 'Nest.js', 'React', 'Vite', 'Tailwind CSS', 'MySQL'],
+    stack: ['Next.js', 'TypeScript', 'Nest.js', 'React', 'Tailwind CSS', 'MySQL'],
     images: [
       { src: '/assets/linus/tlink-primary.png', caption: 'T-Link 로고' },
       { src: '/assets/linus/tlink/01.png', caption: '메인 — 상단 (단축번호 진입 UX)' },

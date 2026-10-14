@@ -20,7 +20,7 @@
 ## 🧭 어떤 일을 해왔나요
 
 - **페어리테일 · 티팟 웹** (2025.12 ~) — 채팅 v2와 JSX 컴포넌트 연동, 캐릭터 제작, 검색·북마크·보관함 개발. 2026년 7–10월 작업을 상세 페이지에 반영했습니다.
-- **페어리테일 · 티팟 모바일 앱** (2026.08 ~) — React Native·Expo 앱 신규 구축. 약 3주 만에 TestFlight·Google Play 내부 테스트에 첫 빌드를 배포하고, 실사용자 QA에서 발견한 채팅·스크롤 문제를 고쳤습니다.
+- **페어리테일 · 티팟 모바일 앱** (2026.08 ~) — React Native·Expo 앱 신규 구축. 약 3주 만에 첫 테스트 빌드를 배포하고, 실사용자 QA에서 발견한 채팅·스크롤 문제를 고쳤습니다. [Android 앱은 Google Play에서 확인할 수 있습니다](https://play.google.com/store/apps/details?id=kr.ai.fairytale.teapot). iOS 앱은 App Store 심사 중입니다.
 - **라이너스** (2025.03 ~ 12) — 대학 LMS(Kiwi Standard), LXP(Kiwi Pro), SK텔레콤 협력 T-Link. 프론트엔드 중심 + DB·일정·고객사 소통까지.
 - **에피소든** (2021.03 ~ 2024.06) — 150개국 사용자 글로벌 WebRTC 영어 회화 매칭. 매칭 알고리즘 초기 설계(Stable Roommate 기반), 디바이스·MediaStream 통합 관리, 친구 시스템 재사용 컴포넌트화.
 

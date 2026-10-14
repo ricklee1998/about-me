@@ -94,6 +94,27 @@ export default function ProjectPage() {
         </h1>
         <p className="mt-2 text-lg text-slate-600 dark:text-slate-300">{project.oneLine}</p>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{project.role}</p>
+        {project.storeLinks && (
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+            {project.storeLinks.map((store) =>
+              store.href ? (
+                <a
+                  key={store.label}
+                  href={store.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-semibold text-brand-700 dark:text-brand-400 hover:underline"
+                >
+                  {store.label}에서 보기 ↗
+                </a>
+              ) : (
+                <span key={store.label} className="text-xs text-slate-500 dark:text-slate-400">
+                  {store.label} {store.status}
+                </span>
+              ),
+            )}
+          </div>
+        )}
         {project.note && (
           <p className="mt-4 text-sm text-slate-500 dark:text-slate-400 italic">※ {project.note}</p>
         )}
@@ -286,11 +307,13 @@ export default function ProjectPage() {
 
       {project.images.length > 1 && (
         <section className="mt-12">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white">스크린샷</h2>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">
+            {project.id === 'teapot-mobile' ? '앱 화면 · iOS / Android' : '스크린샷'}
+          </h2>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
             이미지를 클릭하면 전체보기로 확대됩니다.
           </p>
-          <div className="mt-4 grid sm:grid-cols-2 gap-4">
+          <div className={`mt-4 grid gap-4 ${project.id === 'teapot-mobile' ? 'grid-cols-2 lg:grid-cols-4' : 'sm:grid-cols-2'}`}>
             {project.images.slice(1).map((img) => (
               <figure
                 key={img.src}
@@ -301,7 +324,7 @@ export default function ProjectPage() {
                   onClick={() => !img.isPlaceholder && openLightbox(img.src)}
                   disabled={img.isPlaceholder}
                   aria-label={img.isPlaceholder ? '이미지 준비 중' : '이미지 전체보기'}
-                  className="block w-full aspect-[16/10] bg-slate-100 dark:bg-slate-900 flex items-center justify-center overflow-hidden cursor-zoom-in disabled:cursor-default group"
+                  className={`block w-full bg-slate-100 dark:bg-slate-900 flex items-center justify-center overflow-hidden cursor-zoom-in disabled:cursor-default group ${project.id === 'teapot-mobile' ? 'aspect-[9/16]' : 'aspect-[16/10]'}`}
                 >
                   {img.isPlaceholder ? (
                     <div className="text-slate-400 dark:text-slate-500 text-xs p-4 text-center">
