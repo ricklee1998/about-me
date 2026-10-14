@@ -137,6 +137,28 @@ export default function ProjectPage() {
         </p>
       </section>
 
+      {project.recentWork && project.recentWork.length > 0 && (
+        <section className="mt-10">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white">
+            최근 작업 <span className="text-sm font-medium text-slate-500 dark:text-slate-400">{project.recentRange}</span>
+          </h2>
+          <div className="mt-4 space-y-3">
+            {project.recentWork.map((work) => (
+              <article
+                key={`${work.period}-${work.title}`}
+                className="grid sm:grid-cols-[7rem_1fr] gap-2 sm:gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40"
+              >
+                <span className="text-sm font-semibold text-brand-700 dark:text-brand-400">{work.period}</span>
+                <div>
+                  <h3 className="font-bold text-slate-900 dark:text-white">{work.title}</h3>
+                  <p className="mt-1 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{work.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
       {project.features && project.features.length > 0 && (
         <section className="mt-10">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white">핵심 기능</h2>

@@ -25,7 +25,7 @@ export default function ProjectGrid() {
           진행한 프로젝트
         </h2>
         <p className="mt-3 text-slate-600 dark:text-slate-300">
-          카드를 클릭하면 각 프로젝트의 상세 페이지로 이동합니다.
+          티팟 웹·앱의 2026년 7–10월 작업을 반영했습니다. 카드를 클릭하면 상세 페이지로 이동합니다.
         </p>
       </header>
 

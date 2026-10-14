@@ -28,15 +28,15 @@ export const profile: Profile = {
   name: '이선위',
   role: 'Frontend Developer',
   tagline:
-    '사용자가 자연스럽고 편리하게 서비스를 이용할 수 있도록 고민하는 프론트엔드 개발자',
+    '웹과 앱을 만들고, 출시 뒤 생긴 문제까지 끝까지 따라가는 프론트엔드 개발자',
   intro: [
     {
       body:
-        '저는 사용자가 자연스럽고 편리하게 서비스를 이용할 수 있도록 고민하는 프론트엔드 개발자입니다. 단순히 화면을 구현하는 것을 넘어 서비스 구조를 이해하고, 사용자 경험과 운영 효율성을 함께 고려하는 개발을 지향합니다.',
+        '화면을 만드는 데서 일을 끝내지 않습니다. 사용자가 어디서 막히는지 보고, 원인이 화면 밖에 있으면 로그와 데이터까지 따라갑니다.',
     },
     {
       body:
-        '약 5년간 글로벌 영상 커뮤니케이션 서비스, 교육 플랫폼, AI 캐릭터 채팅 서비스 개발을 경험하며 React·Next.js·TypeScript 기반의 다양한 웹 서비스를 구축해왔습니다. 개발 과정에서는 기능 구현뿐 아니라 서비스 안정성·성능·유지보수성까지 함께 고려하며 사용자에게 더 나은 경험을 제공하기 위해 노력해왔습니다.',
+        '약 5년간 글로벌 영상통화, 대학 교육 플랫폼, AI 캐릭터 채팅 서비스를 만들었습니다. 최근에는 티팟의 웹 채팅과 제작 기능을 다듬고, React Native 앱을 처음부터 만들어 내부 테스트에 올렸습니다.',
     },
     {
       title: '에피소든 — 글로벌 WebRTC',
@@ -51,7 +51,7 @@ export const profile: Profile = {
     {
       title: '페어리테일 — AI 캐릭터 채팅',
       body:
-        '페어리테일에서는 LLM 기반 AI 캐릭터 채팅 서비스 개발에 참여하며 사용자 입력부터 모델 응답, 메모리 데이터 연결, UI 렌더링까지 복잡한 데이터 흐름을 구현했습니다. 새로운 기술을 빠르게 학습하고 서비스에 적용하는 과정에서 문제 해결 능력과 개발 역량을 더욱 성장시킬 수 있었습니다.',
+        '티팟에서는 채팅 화면, 캐릭터 제작, 검색과 보관함을 개발했습니다. 2026년 8월부터는 React Native·Expo 앱을 새로 만들었습니다. 출시 준비 중 안드로이드 발열 제보를 받고 실기기로 원인을 측정해 고쳤고, 채팅 중 앱을 내려도 답변을 이어 볼 수 있도록 백엔드와 함께 연결 흐름을 손봤습니다.',
     },
     {
       title: '서비스는 자식, 회사는 가족',
@@ -68,9 +68,9 @@ export const profile: Profile = {
         '150개국 사용자가 이용하는 WebRTC 서비스에서, 재현하기 어려운 장애를 로그와 데이터로 추적해 구조적으로 개선했습니다.',
     },
     {
-      title: 'AI 기반 서비스',
+      title: '티팟 웹과 앱',
       body:
-        'LLM·메모리·UI 렌더링이 얽힌 복잡한 데이터 흐름을 새로 학습하며 빠르게 서비스에 녹였습니다. 변화에 적응하는 속도가 강점입니다.',
+        '웹 채팅과 제작 기능을 맡고, React Native 앱을 처음부터 구축해 내부 테스트에 배포했습니다. 안드로이드 발열은 실기기에서 원인을 찾아 대기 CPU를 약 230%에서 15%로 낮췄습니다.',
     },
     {
       title: '대학 LMS — 고객과의 소통',
@@ -83,11 +83,15 @@ export const profile: Profile = {
     phone: '010-6289-2548',
     github: 'https://github.com/ricklee1998',
   },
-  keywords: ['WebRTC', 'AI Chat', 'LMS', 'Next.js', 'TypeScript'],
+  keywords: ['Next.js', 'TypeScript', 'React Native', '채팅 UX', '성능 분석'],
   skills: [
     {
       label: 'Frontend',
-      items: ['React', 'Next.js', 'Vue.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'PWA'],
+      items: ['React', 'Next.js', 'Vue.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Zustand', 'TanStack Query', 'PWA'],
+    },
+    {
+      label: 'Mobile',
+      items: ['React Native', 'Expo', 'Reanimated', 'Android', 'iOS'],
     },
     {
       label: 'Realtime · Media',
@@ -98,7 +102,7 @@ export const profile: Profile = {
       items: ['NestJS', 'Spring Boot', 'Node.js', 'Python'],
     },
     {
-      label: 'Infra · Tooling',
+      label: 'Infra · Quality',
       items: [
         'GCP',
         'Firebase / Firestore',
@@ -107,6 +111,8 @@ export const profile: Profile = {
         'Kibana',
         'JMeter',
         'CI/CD',
+        'Playwright',
+        'Crashlytics',
       ],
     },
   ],
