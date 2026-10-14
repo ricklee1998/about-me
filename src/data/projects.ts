@@ -135,7 +135,7 @@ export const projects: Project[] = [
     ],
     stack: ['React Native', 'Expo', 'TypeScript', 'Reanimated', 'Zustand', 'Firebase', 'Crashlytics'],
     images: [
-      { src: '/assets/teapot/mobile-cover.svg', caption: '티팟 모바일 앱 프로젝트 표지' },
+      { src: '/assets/teapot/mobile-cover.png', caption: 'iOS · 홈 화면 (추천 탭)' },
       { src: '/assets/teapot/mobile/ios/01-4.png', caption: 'iOS · 캐릭터 상세' },
       { src: '/assets/teapot/mobile/ios/02-5.png', caption: 'iOS · 채팅' },
       { src: '/assets/teapot/mobile/ios/03-6.png', caption: 'iOS · 홈과 실시간 랭킹' },
