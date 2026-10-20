@@ -88,14 +88,14 @@ export const projects: Project[] = [
     context:
       '2026년 8월 26일 앱 저장소를 처음 만들었습니다. 이미 운영 중인 티팟 웹을 바탕으로 로그인, 탐색, 캐릭터 상세, 채팅, 캐릭터 제작을 앱에서도 쓸 수 있게 하는 일이었습니다.',
     overview:
-      '공통 컴포넌트부터 화면과 내비게이션을 만들고 태블릿·폴더블 레이아웃을 맞췄습니다. 약 3주 만에 TestFlight와 Google Play 내부 테스트에 첫 빌드를 배포했습니다. 이후 실사용자 QA에서 발견한 채팅과 스크롤 문제를 계속 고쳤습니다.',
+      '공통 컴포넌트부터 화면과 내비게이션을 만들고 태블릿·폴더블 레이아웃을 맞췄습니다. 약 4주 만에 TestFlight와 Google Play 내부 테스트에 첫 빌드를 배포했습니다. 이후 실사용자 QA에서 발견한 채팅과 스크롤 문제를 계속 고쳤습니다.',
     recentRange: '2026.08–10',
     recentWork: [
       {
         period: '2026.08–09',
         title: '앱 신규 구축과 첫 테스트 배포',
         featured: true,
-        body: '8월 26일 저장소를 만들고 로그인, 홈, 검색, 캐릭터 상세, 채팅, 제작 화면을 구현했습니다. 약 3주 뒤 iOS TestFlight와 Google Play 내부 테스트에 첫 빌드를 올렸습니다.',
+        body: '앱 저장소를 만들고 로그인, 홈, 검색, 캐릭터 상세, 채팅, 제작 화면을 구현했습니다. 약 4주 뒤 iOS TestFlight와 Google Play 내부 테스트에 첫 빌드를 올렸습니다.',
       },
       {
         period: '2026.09',
@@ -130,7 +130,7 @@ export const projects: Project[] = [
       'TestFlight·Google Play 내부 테스트 빌드와 배포 자동화, 실사용자 QA 대응',
     ],
     achievements: [
-      '2026.08.26 저장소 생성 후 약 3주 만에 iOS·Android 내부 테스트에 첫 빌드 배포',
+      'React Native·Expo 앱 신규 구축 후 약 4주 만에 iOS·Android 내부 테스트에 첫 빌드 배포',
       '채팅 중 앱을 내려도 재진입 후 답변을 이어 볼 수 있도록 백엔드와 함께 연결 흐름 개선',
     ],
     stack: ['React Native', 'Expo', 'TypeScript', 'Reanimated', 'Zustand', 'Firebase', 'Crashlytics'],
